@@ -6,6 +6,7 @@ import 'archived_cases_list.dart';
 import 'package:counselaicompanion/frontend/utils/color_utils.dart';
 // ignore: depend_on_referenced_packages
 import 'package:shared_preferences/shared_preferences.dart';
+import '/frontend/screens/profile_page.dart';
 
 class HomePage extends StatelessWidget {
   final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
@@ -70,6 +71,7 @@ class HomePage extends StatelessWidget {
                 onTap: () async {
                   final SharedPreferences prefs = await _prefs;
                   prefs.clear();
+                  // ignore: use_build_context_synchronously
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
                     builder: (context) => const SignUpScreen(),
                   ));
@@ -125,10 +127,11 @@ class HomePage extends StatelessWidget {
                     ArchivedCasesList(),
                   ],
                 ),
-                const Icon(
-                  Icons.person,
-                  size: 250.0,
-                ),
+                const ProfilePage()
+                // const Icon(
+                //   Icons.person,
+                //   size: 250.0,
+                // ),
                 //Icon(Icons.directions_bike,size: 55.0,),
               ],
             ),

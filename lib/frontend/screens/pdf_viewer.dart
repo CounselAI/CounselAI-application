@@ -1,3 +1,4 @@
+import 'package:counselaicompanion/frontend/screens/counsel_cases.dart';
 import 'package:flutter/material.dart';
 // ignore: depend_on_referenced_packages
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
@@ -44,6 +45,12 @@ class _PDFViewerState extends State<PDFViewer> {
       body: SfPdfViewer.network('https://files.catbox.moe/v6dj0v.pdf',
           controller: _pdfViewerController, key: _pdfViewerStateKey),
       appBar: AppBar(
+        leading: BackButton(
+            color: Colors.white,
+            onPressed: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomePage()),
+                )),
         actions: <Widget>[
           IconButton(
               iconSize: 40,

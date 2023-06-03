@@ -52,7 +52,7 @@ class _ArchivedCasesListState extends State<ArchivedCasesList> {
                   });
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => PDFWrapper()),
+                    MaterialPageRoute(builder: (context) => const PDFWrapper()),
                   );
                 },
                 child: SizedBox(

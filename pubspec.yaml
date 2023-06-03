@@ -52,7 +52,6 @@ dev_dependencies:
   get:
   shared_preferences:
   syncfusion_flutter_pdfviewer: ^19.1.69-beta
-
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
